@@ -1,0 +1,9 @@
+nameOverride: "umbrella-chart-test"
+
+chart:
+ replicaCount: 4
+ image:
+   tag: v0.0.4
+ route:
+  path: pi-node2.local
+
