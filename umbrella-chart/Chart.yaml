@@ -24,6 +24,6 @@ version: 0.1.0
 appVersion: "1.16.0"
 
 dependencies:
-  - name: chart
-    repository: oci://quay.io/cbennett/gin-album-app
+  - name: gin-album-app-chart
+    repository: oci://quay.io/cbennett
     version: 1.0.0

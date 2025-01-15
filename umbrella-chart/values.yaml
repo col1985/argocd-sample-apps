@@ -1,9 +1,15 @@
-nameOverride: "umbrella-chart-test"
+nameOverride: "umbrella-chart-demo"
 
-chart:
- replicaCount: 1
+gin-album-app-chart:
+ replicaCount: 2
  image:
-   tag: v0.0.2
+   tag: v0.0.4
  route:
-  path: pi-node2.local
-
+  path: pi-node2-local
+ resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 30m
+    memory: 512Mi
