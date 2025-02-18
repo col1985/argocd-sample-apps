@@ -4,5 +4,5 @@ myenv
 __pycache__
 go-todo
 
-umbrella-chart/Chart.lock
-umbrella-chart/charts/*.tgz
+basic-gin-app/Chart.lock
+basic-gin-app/charts/*.tgz
