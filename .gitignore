@@ -6,3 +6,7 @@ go-todo
 
 basic-gin-app/Chart.lock
 basic-gin-app/charts/*.tgz
+
+postgres-db/*.tgz
+
+.DS_Store

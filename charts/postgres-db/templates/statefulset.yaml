@@ -6,12 +6,13 @@ metadata:
 spec:
   serviceName: {{ .Values.containerName }}-service
   selector:
-     {{- include "postgres-db-chart.selectorLabels" . | nindent 4 }}
+    matchLabels:
+      {{- include "postgres-db-chart.selectorLabels" . | nindent 6 }}
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
-      {{- include "postgres-db-chart.labels" . | nindent 8 }}
+        {{- include "postgres-db-chart.labels" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Values.containerName }}
@@ -20,6 +21,6 @@ spec:
             {{- toYaml .Values.volumeMounts | default "" | nindent 12 }}
           envFrom:
             - configMapRef:
-              name: {{ .Values.configMap.name }}
+                name: {{ .Values.configMap.name }}
       volumes:
         {{- toYaml .Values.volumes | default "" | nindent 8 }}

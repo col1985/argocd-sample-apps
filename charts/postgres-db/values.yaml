@@ -40,12 +40,10 @@ service:
 configMap:
   name: postgres-db-config
   env:
-    api_host: "8080"
-    db_host: postgres-db.todo-api.svc.cluster.local
-    db_name: tasks
-    db_password: password
-    db_port: "5432"
-    db_user: user
+    postgres_user: "user"
+    postgres_password: "password"
+    pgdata: "/data/pgdata"
+    postgres_db: "tasks"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

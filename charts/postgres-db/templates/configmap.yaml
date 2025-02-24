@@ -7,5 +7,5 @@ metadata:
     {{- include "postgres-db-chart.labels" . | nindent 4 }}
 data:
   {{- range $key, $val := .Values.configMap.env }}
-    {{ upper $key }}: {{ $val }}
+  {{ $key | upper }}: "{{ $val }}"
   {{- end }}

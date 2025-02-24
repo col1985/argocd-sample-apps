@@ -46,8 +46,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Selector labels
 */}}
 {{- define "postgres-db-chart.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "postgres-db-chart.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+app: {{ include "postgres-db-chart.name" . }}
 {{- end }}
 
 {{/*
