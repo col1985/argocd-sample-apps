@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: gin-album-app  # Change to your application name
-  # namespace: argocd
+  namespace: gin-argo-test
 spec:
   project: default
   source:
