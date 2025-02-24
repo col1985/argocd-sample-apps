@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://quay.io/cbennett
+    repoURL: oci://quay.io/cbennett
     targetRevision: "v1.0.2"
     chart: gin-album-app-chart
     helm:
