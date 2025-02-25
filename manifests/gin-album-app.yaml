@@ -4,7 +4,7 @@ metadata:
   name: gin-album-app  # Change to your application name
   namespace: gin-album-app
 spec:
-  project: default
+  project: gin-album-app-project
   source:
     repoURL: oci://quay.io/cbennett
     targetRevision: "v1.0.2"
