@@ -6,6 +6,7 @@ go-todo
 
 basic-gin-app/Chart.lock
 basic-gin-app/charts/*.tgz
+manifests/argocd.md
 
 postgres-db/*.tgz
 

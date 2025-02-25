@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: gin-album-app  # Change to your application name
-  namespace: gin-argo-test
+  namespace: gin-album-app
 spec:
   project: default
   source:
@@ -14,10 +14,10 @@ spec:
         replicaCount: 3
   destination:
     server: https://kubernetes.default.svc
-    namespace: gin-argo-test
+    namespace: gin-album-app
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true
+      - CreateNamespace=false
