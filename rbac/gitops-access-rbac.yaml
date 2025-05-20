@@ -2,11 +2,17 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: gitops-access
+  name: key-cloak-gitops-access
 rules:
   - apiGroups: ["argoproj.io"]
     resources: ["applications"]
     verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  - apiGroups: [""]
+    resources: ["pods", "pods/log"]
+    verbs: ["get","list", "watch"]
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["get", "list", "create", "update", "delete", "patch", "watch"]
   - apiGroups: [""]
     resources: ["namespaces"]
     verbs: ["create", "delete"]

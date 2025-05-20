@@ -1,6 +1,6 @@
 dependencies:
 - name: gin-album-app-chart
   repository: oci://quay.io/cbennett
-  version: 1.0.0
-digest: sha256:56d4c859224b6a46483d16e70f741c53197ef61b238f869359496f9e27e0c84d
-generated: "2025-01-15T14:57:37.207707Z"
+  version: v1.0.2
+digest: sha256:25e8bb42f2785e14003cf4176a9a7ad7193305595fa16edf1ea43a7f1383129c
+generated: "2025-03-05T09:25:14.89228Z"

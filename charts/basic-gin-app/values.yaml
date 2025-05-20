@@ -1,15 +1,15 @@
-nameOverride: "umbrella-chart-demo"
+nameOverride: "demo"
 
 gin-album-app-chart:
- replicaCount: 2
- image:
-   tag: v1.0.1
- route:
-  path: pi-node2-local
- resources:
-  limits:
-    cpu: 500m
-    memory: 512Mi
-  requests:
-    cpu: 30m
-    memory: 512Mi
+  replicaCount: 1
+  image:
+    tag: latest
+  route:
+    path: gin-album-app-srv-playground.apps.rosa-l5kv8.dt9c.p1.openshiftapps.com
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 30m
+      memory: 512Mi

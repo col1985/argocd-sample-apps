@@ -1,4 +1,7 @@
 
-todo-api-chart: {}
+todo-api-chart:
+  replicaCount: 1
+  image:
+    tag: "v1.0.4" # Overrides the image tag whose default is the chart appVersion.
 
 postgres-db-chart: {}
