@@ -1,7 +1,5 @@
-global:
-  app_name: jdt-analyzer
 
 todo-app-api-chart:
-  replicaCount: 1
+  replicaCount: 2
   image:
     tag: "v0.0.1" # Overrides the image tag whose default is the chart appVersion.

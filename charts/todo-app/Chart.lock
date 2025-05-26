@@ -1,9 +1,0 @@
-dependencies:
-- name: todo-api-chart
-  repository: oci://quay.io/cbennett
-  version: 0.0.4
-- name: postgres-db-chart
-  repository: oci://quay.io/cbennett
-  version: 0.0.3
-digest: sha256:77f221d86dbb7ef9585f45798450e81ed8e71223ad47175787329473844903f1
-generated: "2025-02-19T12:06:24.612686Z"
