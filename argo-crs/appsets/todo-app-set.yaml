@@ -18,7 +18,7 @@ spec:
       # you can use the path strings with / delimiter as variables
       name: "todo-app-{{path.basename}}"
     spec:
-      project: default
+      project: todo-project
       source:
         helm:
           # specify different values file based on directories variables
