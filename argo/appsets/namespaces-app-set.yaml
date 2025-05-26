@@ -16,7 +16,7 @@ spec:
     metadata:
       namespace: openshift-gitops
       # you can use the path strings with / delimiter as variables
-      name: "{{path[2]}}-{{path.basename}}"
+      name: "{{path[3]}}-{{path.basename}}"
     spec:
       project: ns-config-project
       source:
