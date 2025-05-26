@@ -26,5 +26,5 @@ appVersion: "1.16.0"
 dependencies:
   - name: todo-app-api-chart
     repository: oci://quay.io/cbennett
-    version: 0.0.1
+    version: v0.0.1
 
