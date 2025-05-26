@@ -1,3 +1,6 @@
+namespace: demo-app-prod
+env: prod
+resourceQuotaName: large-resource-quota
 podCount: "5"
 cpuRequest: "4"
 cpuLimit: "8"

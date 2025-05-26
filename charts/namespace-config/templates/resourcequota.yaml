@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: {{ .Values.default.resourceQuotaName }}
+  name: {{ .Values.resourceQuotaName | default .Values.default.resourceQuotaName }}
   namespace: {{ .Values.namespace | default .Values.default.namespace }}
 spec:
   hard:

@@ -1,9 +1,9 @@
 global:
-  environment: dev
   appVersion: "1.0.0"
 
 default:
-  # namespace: my-app
+  namespace: default-ns
+  env: env
   resourceQuotaName: default-quota
   podCount: "2"
   cpuRequest: "1"

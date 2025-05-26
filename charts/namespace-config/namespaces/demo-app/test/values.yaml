@@ -1,5 +1,8 @@
-podCount: "5"
-cpuRequest: "1"
-cpuLimit: "2"
-memoryRequest: "2Gi"
-memoryLimit: "4Gi"
+namespace: demo-app-test
+resourceQuotaName: med-resource-quota
+env: test
+podCount: "10"
+cpuRequest: "2"
+cpuLimit: "4"
+memoryRequest: "4Gi"
+memoryLimit: "8Gi"
