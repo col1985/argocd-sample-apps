@@ -4,4 +4,4 @@ global:
 todo-app-api-chart:
   replicaCount: 1
   image:
-    tag: "v0.0.1" # Overrides the image tag whose default is the chart appVersion.
+    tag: "v0.0.3" # Overrides the image tag whose default is the chart appVersion.
