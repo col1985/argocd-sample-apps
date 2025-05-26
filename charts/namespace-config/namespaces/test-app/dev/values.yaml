@@ -1,0 +1,8 @@
+namespace: test-app-dev
+resourceQuotaName: small-resource-quota
+env: dev
+podCount: "5"
+cpuRequest: "1"
+cpuLimit: "2"
+memoryRequest: "2Gi"
+memoryLimit: "4Gi"

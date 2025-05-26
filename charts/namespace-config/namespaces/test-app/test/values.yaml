@@ -1,0 +1,8 @@
+namespace: test-app-test
+resourceQuotaName: med-resource-quota
+env: test
+podCount: "10"
+cpuRequest: "2"
+cpuLimit: "4"
+memoryRequest: "4Gi"
+memoryLimit: "8Gi"

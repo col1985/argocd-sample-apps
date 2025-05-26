@@ -1,0 +1,8 @@
+namespace: test-app-prod
+env: prod
+resourceQuotaName: large-resource-quota
+podCount: "5"
+cpuRequest: "4"
+cpuLimit: "8"
+memoryRequest: "8Gi"
+memoryLimit: "16Gi"

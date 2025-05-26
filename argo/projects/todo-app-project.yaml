@@ -15,8 +15,12 @@ spec:
   # For a general example, we allow deployment to any cluster and any namespace.
   # In a production environment, you would typically restrict these to specific clusters/namespaces.
   destinations:
-    - namespace: '*'
-      server: '*'
+    - namespace: 'todo-app-dev'
+      server: 'https://kubernetes.default.svc'
+    - namespace: 'todo-app-test'
+      server: 'https://kubernetes.default.svc'
+    - namespace: 'todo-app-prod'
+      server: 'https://kubernetes.default.svc'
     # Example for a specific cluster/namespace:
     # - namespace: 'my-app-namespace'
     #   server: 'https://kubernetes.default.svc' # Or the API server URL of your target cluster
