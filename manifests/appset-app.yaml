@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-application-set
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/col1985/argocd-sample-apps.git
+    targetRevision: HEAD
+    path: appsets/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openshift-gitops
+  syncPolicy:
+    automated:
+      selfHeal: true
