@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/col1985/argocd-sample-apps.git
     targetRevision: HEAD
-    path: appsets/
+    path: argo/appsets/
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops
