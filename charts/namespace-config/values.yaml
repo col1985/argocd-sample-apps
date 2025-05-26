@@ -3,7 +3,7 @@ global:
   appVersion: "1.0.0"
 
 default:
-  namespace: my-app
+  # namespace: my-app
   resourceQuotaName: default-quota
   podCount: "2"
   cpuRequest: "1"
