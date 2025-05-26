@@ -1,5 +1,6 @@
 namespace: demo-app-dev
 resourceQuotaName: small-resource-quota
+env: dev
 podCount: "5"
 cpuRequest: "1"
 cpuLimit: "2"

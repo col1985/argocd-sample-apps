@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-application-set
+  name: application-sets
   namespace: openshift-gitops
 spec:
   project: default
@@ -15,3 +15,5 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
+    syncOptions:
+    - ApplyOutOfSyncOnly=true

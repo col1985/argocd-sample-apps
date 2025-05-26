@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: user-defined-resourcequota-permissions
+  labels:
+    argocd/aggregate-to-admin: 'true' # This label is crucial for aggregation
+rules:
+- apiGroups: [""] # Core API group
+  resources: ["resourcequotas"]
+  verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]

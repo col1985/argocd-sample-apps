@@ -2,7 +2,6 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: argocd-resourcequota-creator
-  namespace: my-application-dev # This role is specific to this namespace
 rules:
 - apiGroups: [""] # Core API group for resourcequotas
   resources: ["resourcequotas"]
