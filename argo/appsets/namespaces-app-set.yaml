@@ -16,7 +16,7 @@ spec:
     metadata:
       namespace: openshift-gitops
       # you can use the path strings with / delimiter as variables
-      name: "{{path[2]}}-{{path.basename}}"
+      name: "{{path[2]]}}-{{path.basename}}"
     spec:
       project: ns-config-project
       source:
@@ -24,7 +24,7 @@ spec:
           # specify different values file based on directories variables
           valueFiles:
             - "values.yaml"
-            - "namespaces/{{path[2]}}/{{path.basename}}/values.yaml"
+            - "namespaces/{{path[3]}}/{{path.basename}}/values.yaml"
         path: charts/namespace-config
         repoURL: https://github.com/col1985/argocd-sample-apps.git
         targetRevision: HEAD
@@ -35,5 +35,5 @@ spec:
         - ApplyOutOfSyncOnly=true
       destination:
         # specify different destinations
-        namespace: "{{path[2]}}-{{path.basename}}"
+        namespace: "{{path[3]}}-{{path.basename}}"
         server: https://kubernetes.default.svc
