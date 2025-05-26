@@ -23,8 +23,8 @@ spec:
         helm:
           # specify different values file based on directories variables
           valueFiles:
-            - "env/{{path.basename}}/values.yaml"
             - "values.yaml"
+            - "env/{{path.basename}}/values.yaml"
         path: charts/todo-app
         repoURL: https://github.com/col1985/argocd-sample-apps.git
         targetRevision: HEAD
