@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: {{ .Values.defaultResourceQuotaName }}
-  namespace: {{ .Values.namespace | default .Values.defaultNamespace }}
+  name: {{ .Values.default.resourceQuotaName }}
+  namespace: {{ .Values.namespace | default .Values.default.namespace }}
 spec:
   hard:
-    pods: {{ .Values.podCount | default .Values.defaultPodCount }}
-    requests.cpu: {{ .Values.cpuRequest | default .Values.defaultCpuRequest }}
-    limits.cpu: {{ .Values.cpuLimit | default .Values.defaultCpuLimit }}
-    requests.memory: {{ .Values.memoryRequest | default .Values.defaultMemoryRequest }}
-    limits.memory: {{ .Values.memoryLimit | default .Values.defaultMemoryLimit }}
+    pods: {{ .Values.podCount | default .Values.default.podCount }}
+    requests.cpu: {{ .Values.cpuRequest | default .Values.default.cpuRequest }}
+    limits.cpu: {{ .Values.cpuLimit | default .Values.default.cpuLimit }}
+    requests.memory: {{ .Values.memoryRequest | default .Values.default.memoryRequest }}
+    limits.memory: {{ .Values.memoryLimit | default .Values.default.memoryLimit }}

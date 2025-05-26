@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: argocd-resourcequota-creator-binding
+  namespace: my-application-dev # The binding is also specific to this namespace
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-application-controller
+  namespace: openshift-gitops # The namespace where the Argo CD ServiceAccount resides
+roleRef:
+  kind: Role
+  name: argocd-resourcequota-creator
+  apiGroup: rbac.authorization.k8s.io

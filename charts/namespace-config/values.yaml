@@ -1,7 +1,12 @@
-defaultNamespace: my-application
-defaultResourceQuotaName: my-application-quota
-defaultPodCount: "10"
-defaultCpuRequest: "2"
-defaultCpuLimit: "4"
-defaultMemoryRequest: "4Gi"
-defaultMemoryLimit: "8Gi"
+global:
+  environment: dev
+  appVersion: "1.0.0"
+
+default:
+  namespace: my-app
+  resourceQuotaName: default-quota
+  podCount: "2"
+  cpuRequest: "1"
+  cpuLimit: "2"
+  memoryRequest: "1Gi"
+  memoryLimit: "2Gi"

@@ -1,29 +1,10 @@
-apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
 metadata:
-  name: deny-all-except-openshift
-  namespace: {{ .Values.namespace | default .Values.defaultNamespace }}
+  name: allow-same-namespace
+  namespace: {{ .Values.namespace | default .Values.default.namespace }}
 spec:
-  podSelector:
-    matchLabels: {}
-  policyTypes:
-  - Ingress
-  - Egress
+  podSelector: {}
   ingress:
   - from:
-    - namespaceSelector:
-        matchNames:
-        - openshift-system
-        - openshift-logging
-        - openshift-monitoring
-        - default
-    - podSelector: {}
-  egress:
-  - to:
-    - namespaceSelector:
-        matchNames:
-        - openshift-system
-        - openshift-logging
-        - openshift-monitoring
-        - default
     - podSelector: {}
