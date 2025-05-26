@@ -4,4 +4,4 @@ todo-app-api-chart:
   image:
     tag: "v0.0.6" # Overrides the image tag whose default is the chart appVersion.
   route:
-    path: demo-todo-app-dev.apps.rosa.rosa-w6r55.h96u.p3.openshiftapps.com/
+    path: demo-todo-app-dev.apps.rosa.rosa-w6r55.h96u.p3.openshiftapps.com
