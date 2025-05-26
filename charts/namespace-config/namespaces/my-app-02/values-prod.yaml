@@ -1,6 +1,0 @@
-namespace: my-application-prod
-podCount: "5"
-cpuRequest: "4"
-cpuLimit: "8"
-memoryRequest: "8Gi"
-memoryLimit: "16Gi"

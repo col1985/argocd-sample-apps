@@ -1,4 +1,4 @@
-namespace: my-application-dev
+# namespace: my-application-dev
 podCount: "5"
 cpuRequest: "1"
 cpuLimit: "2"

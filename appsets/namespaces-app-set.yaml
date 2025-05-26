@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: namespace-config-app-set
+  namespace: openshift-gitops
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/col1985/argocd-sample-apps.git
+        revision: HEAD
+        directories:
+          # here it will read the paths under the app
+          # umbrella chart and the subpaths
+          - path: charts/namespace-config/*/*/*
+  template:
+    metadata:
+      namespace: openshift-gitops
+      # you can use the path strings with / delimiter as variables
+      name: "ns-config-{{path.basename}}"
+    spec:
+      project: default
+      source:
+        helm:
+          # specify different values file based on directories variables
+          valueFiles:
+            - "values.yaml"
+            - "namespaces/{{path[2]}}/{{path.basename}}/values.yaml"
+        path: charts/namespace-config
+        repoURL: https://github.com/col1985/argocd-sample-apps.git
+        targetRevision: HEAD
+      syncPolicy:
+        automated:
+          selfHeal: true
+        syncOptions:
+        - ApplyOutOfSyncOnly=true
+      destination:
+        # specify different destinations
+        namespace: "{{path[2]}}-{{path.basename}}"
+        server: https://kubernetes.default.svc
