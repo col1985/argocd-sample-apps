@@ -18,7 +18,7 @@ spec:
       # you can use the path strings with / delimiter as variables
       name: "{{path[3]}}-{{path.basename}}"
     spec:
-      project: default
+      project: ns-config-project
       source:
         helm:
           # specify different values file based on directories variables

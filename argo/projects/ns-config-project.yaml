@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: ns-config-project
+  namespace: openshift-gitops
+spec:
+  description: Project for deploying Namespace config chart.
+
+  # Define the source repositories that applications in this project can use.
+  sourceRepos:
+    - 'https://github.com/col1985/argocd-sample-apps.git'
+    - '*' # Allow any repository for broader flexibility, or remove if only the specified repo is allowed.
+
+  # Define the destination clusters and namespaces where applications in this project can be deployed.
+  # For a general example, we allow deployment to any cluster and any namespace.
+  # In a production environment, you would typically restrict these to specific clusters/namespaces.
+  destinations:
+    - namespace: '*'
+      server: '*'
+    # Example for a specific cluster/namespace:
+    # - namespace: 'my-app-namespace'
+    #   server: 'https://kubernetes.default.svc' # Or the API server URL of your target cluster
+
+  # Define which cluster-scoped resources applications in this project are allowed to manage.
+  # Using '*' allows all, which is generally not recommended for production.
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  # Define which namespace-scoped resources applications in this project are allowed to manage.
+  # Using '*' allows all, which is generally not recommended for production.
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  # Optional: Define roles and groups for RBAC within this project
+  # roles:
+  #   - name: default-admin
+  #     description: Default admin role for the project
+  #     policies:
+  #       - p, proj:sample-apps-project:default-admin, applications, *, sample-apps-project/*, allow
+  #     groups:
+  #       - your-kubernetes-group-name # e.g., 'system:masters' or a custom OIDC group
